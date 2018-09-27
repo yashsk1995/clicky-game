@@ -22,9 +22,7 @@ class App extends React.Component{
     }
 
     clicked = id =>{
-        if(this.state.score === 12){
-
-        }
+      
         let array  =  this.state.clickedimg;
         if(array.includes(id)){
             this.setState({score :0});
