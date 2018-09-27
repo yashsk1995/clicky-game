@@ -22,6 +22,9 @@ class App extends React.Component{
     }
 
     clicked = id =>{
+        if(this.state.score === 12){
+
+        }
         let array  =  this.state.clickedimg;
         if(array.includes(id)){
             this.setState({score :0});
@@ -31,12 +34,13 @@ class App extends React.Component{
         else{
         // let temp=0;
         array.push(id);
+        const newScore =this.state.score + 1;
         this.shuffleArray(this.state.cards);
-        this.setState({score: this.state.score+1});
+        this.setState({score: newScore});
             
-        if(this.state.score >= this.state.topscore){
+        if(newScore >= this.state.topscore){
             
-            this.setState({topscore:this.state.score});
+            this.setState({topscore:newScore});
             }
 
         console.log(array);
@@ -48,6 +52,7 @@ class App extends React.Component{
             // <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game</Header>
            <div>
             <Navbar score={this.state.score} topscore={this.state.topscore}/>
+            
             <Jumbotron />
             {this.state.cards.map(card => (
               <Card

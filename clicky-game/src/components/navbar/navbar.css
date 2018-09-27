@@ -8,9 +8,13 @@
 }
 .navbar-items3{
     font-size: 30px;
-    width: 240px;
+    width: 200px;
 }
 .navbar-items4{
     font-size: 30px;
-    width: 300px;
+    width: 250px;
+}
+.nav1{
+    box-shadow: 2px 2px 2px 2px lightseagreen;
+ 
 }

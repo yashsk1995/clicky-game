@@ -3,7 +3,7 @@ import "./navbar.css";
 
 const Navbar = props => (
   <div>
-      <nav className="navbar navbar-inverse navbar-fixed-top">
+      <nav className="navbar navbar-inverse navbar-fixed-top nav1">
   <div className="container-fluid">
    
     <ul className="nav navbar-nav">

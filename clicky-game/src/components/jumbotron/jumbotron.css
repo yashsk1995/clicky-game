@@ -2,4 +2,14 @@
     padding: 100px;
     width: 100%;
     text-align: center;
+    color: bisque;
+}
+.img{
+    background: black;
+    background-image: url("/Images/butterfly.gif");
+    background-repeat:space;
+    box-shadow: 5px 5px 8px 5px lightsteelblue;
+
+
+ 
 }

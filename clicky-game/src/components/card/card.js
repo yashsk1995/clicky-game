@@ -4,7 +4,7 @@ const Card = props =>(
 
 <div className="card main images" onClick={() => props.clicked(props.id)} >
 
-  <img className="card-img-top"  src={props.image} alt={props.name} />
+  <img className="card-img-top img1"  src={props.image} alt={props.name} />
  
 </div>
 );
