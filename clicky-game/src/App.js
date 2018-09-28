@@ -10,7 +10,8 @@ class App extends React.Component{
         cards,
         score:0,
         topscore:0,
-        clickedimg:[]
+        clickedimg:[],
+        text:""
     };
     shuffleArray(array) {
         for (var i = array.length - 1; i > 0; i--) {
@@ -27,14 +28,19 @@ class App extends React.Component{
         if(array.includes(id)){
             this.setState({score :0});
             this.setState({clickedimg : []});
-            console.log("Game OVer!!");
+            this.setState({text:"Game OVer!!"});
         }
         else{
         // let temp=0;
+            if(this.state.score === 12){
+                this.setState({text:"You Win!!"});
+            }
+
         array.push(id);
         const newScore =this.state.score + 1;
         this.shuffleArray(this.state.cards);
         this.setState({score: newScore});
+        this.setState({text:"You are Correct!!"});
             
         if(newScore >= this.state.topscore){
             
@@ -51,7 +57,7 @@ class App extends React.Component{
            <div>
             <Navbar score={this.state.score} topscore={this.state.topscore}/>
             
-            <Jumbotron />
+            <Jumbotron text={this.state.text} />
             {this.state.cards.map(card => (
               <Card
               clicked={this.clicked}
